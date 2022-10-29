@@ -4,7 +4,7 @@ const http = require("http")
 
 const app = express()
 
-http.get('http://localhost:8000/', (res) => {
+http.get('http://localhost:8080/', (res) => {
 
     let myData=''
     res.on('data', (chunk)=>{myData+=chunk})
@@ -32,4 +32,4 @@ const server= http.createServer((req, res)=>{
 
 })
 
-server.listen(process.env.PORT || 8000)
+server.listen(process.env.PORT || 8080)
